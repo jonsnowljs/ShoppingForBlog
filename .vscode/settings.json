@@ -1,0 +1,8 @@
+{
+  "appService.zipIgnorePattern": [
+    "node_modules{,/**}",
+    ".vscode{,/**}"
+  ],
+  "appService.defaultWebAppToDeploy": "/subscriptions/84e9bc6e-42dd-498a-ac9f-513601cfe540/resourceGroups/SucculentShop_group/providers/Microsoft.Web/sites/SucculentShop",
+  "appService.deploySubpath": "."
+}

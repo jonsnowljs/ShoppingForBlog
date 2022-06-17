@@ -1,0 +1,45 @@
+{
+  "name": "shopping",
+  "version": "1.0.0",
+  "description": "Shopping Website",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
+    "azure": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonsnowljs/Shopping.git"
+  },
+  "author": "Jiasheng Lu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonsnowljs/Shopping/issues"
+  },
+  "homepage": "https://github.com/jonsnowljs/Shopping#readme",
+  "dependencies": {
+    "@egjs/flicking-plugins": "^4.3.0",
+    "@egjs/react-flicking": "^4.7.0",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
